@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bruno+Ace&family=Hanken+Grotesk:wght@500;700;800&family=Lato:wght@400;700&family=League+Spartan:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
