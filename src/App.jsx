@@ -41,7 +41,7 @@ function App() {
   }, [])
 
   return (
-    <main className={`bg-gray-700 text-white min-h-screen font-lato flex justify-center items-center px-4 ${imagesWeather[weatherInfo?.weather[0].icon]} bg-center`}>
+    <main className={`bg-gray-700 text-white min-h-screen font-lato flex justify-center items-center px-4 ${imagesWeather[weatherInfo?.weather[0].icon]} bg-center object-cover`}>
       <Weather weatherInfo={weatherInfo} />
     </main >
   )
