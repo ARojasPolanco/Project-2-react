@@ -55,7 +55,7 @@ const Weather = ({ weatherInfo }) => {
                     </article>
                 </section>
             </section>
-            <button onClick={handleChangeTemp} className="text-bold text-[#4580BA] bg-white rounded-full px-6 py-1 mt-8">Cambiar a {isCelsius ? "C" : "F"}º</button>
+            <button onClick={handleChangeTemp} className="text-bold text-[#4580BA] bg-white rounded-full px-6 py-1 mt-8">Cambiar a {isCelsius ? "F" : "C"}º</button>
         </section>
     )
 }
