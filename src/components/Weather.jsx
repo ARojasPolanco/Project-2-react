@@ -24,9 +24,9 @@ const Weather = ({ changeCity, handleChangeCity }) => {
         <section className="text-center">
 
             {/* Input */}
-            <form onSubmit={handleChangeCity}>
-                <input id="cityName" type="text" placeholder="Type your city" className="text-black" />
-                <button>ChangeCity</button>
+            <form onSubmit={handleChangeCity} className='flex rounded-md overflow-hidden max-w-max mx-auto mb-6'>
+                <input id="cityName" autoComplete="off" type="text" placeholder="Buscar una ciudad" className="text-black p-2" />
+                <button className="bg-neutral-700 p-2">Buscar</button>
             </form>
 
 

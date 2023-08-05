@@ -8,21 +8,24 @@ function App() {
   const [city, setCity] = useState(null)
 
   const imagesWeather = {
-    "11d": "bg-[url(/image/bg-images/bg-5.jpg)]",
+    "11d": "bg-[url(/image/bg-images/bg-5-d.jpg)]",
+    "11n": "bg-[url(/image/bg-images/bg-5.jpg)]",
     "09d": "bg-[url(/image/bg-images/bg-9.jpg)]",
     "09n": "bg-[url(/image/bg-images/bg-rain-n.jpg)]",
     "10d": "bg-[url(/image/bg-images/bg-2.jpg)]",
     "10n": "bg-[url(/image/bg-images/bg-rain-n.jpg)]",
     "13d": "bg-[url(/image/bg-images/bg-7.jpg)]",
+    "13n": "bg-[url(/image/bg-images/bg-7-n.jpg)]",
     "50d": "bg-[url(/image/bg-images/bg-8.jpg)]",
+    "50n": "bg-[url(/image/bg-images/bg-8-n.jpg)]",
     "01d": "bg-[url(/image/bg-images/bg-1.jpg)]",
-    "02d": "bg-[url(/image/bg-images/bg-3.jpg)]",
-    "03d": "bg-[url(/image/bg-images/bg-3.jpg)]",
-    "04d": "bg-[url(/image/bg-images/bg-6.jpg)]",
     "01n": "bg-[url(/image/bg-images/bg-10-n.jpg)]",
+    "02d": "bg-[url(/image/bg-images/bg-3.jpg)]",
     "02n": "bg-[url(/image/bg-images/bg-11-n.jpg)]",
+    "03d": "bg-[url(/image/bg-images/bg-3.jpg)]",
     "03n": "bg-[url(/image/bg-images/bg-11-n.jpg)]",
-    "04n": "bg-[url(/image/bg-images/bg-12-n.jpeg)]"
+    "04d": "bg-[url(/image/bg-images/bg-6.jpg)]",
+    "04n": "bg-[url(/image/bg-images/bg-12-n.jpeg)]",
   }
 
   const changeCity = city === null ? weatherInfo : city
