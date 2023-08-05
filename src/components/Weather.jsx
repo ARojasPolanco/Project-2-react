@@ -30,12 +30,12 @@ const Weather = ({ changeCity, handleChangeCity }) => {
             </form>
 
 
-            <h2 className="mb-8 text-black font-bold text-2xl">{changeCity?.name}</h2>
+            <h2 className="mb-8 bg-white/60 rounded-2xl text-black font-bold text-2xl">{changeCity?.name}</h2>
 
             <section className="grid gap-4 sm:grid-cols-[auto_auto]">
                 {/* sección superior */}
                 <section className="bg-white/50 rounded-[38px] grid grid-cols-2 items-center">
-                    <h4 className="col-span-2 font-semibold text-gray-500 text-2xl">{changeCity?.weather[0].description}</h4>
+                    <h4 className="col-span-2 font-semibold text-black text-2xl">{changeCity?.weather[0].description}</h4>
                     <span className="text-black text-4xl">{resultTempConvertion}º{isCelsius ? "C" : "F"}</span>
                     <div>
                         <img src={`https://openweathermap.org/img/wn/${changeCity?.weather[0].icon}@4x.png`} alt='' />

@@ -10,8 +10,9 @@ function App() {
   const imagesWeather = {
     "11d": "bg-[url(/image/bg-images/bg-5.jpg)]",
     "09d": "bg-[url(/image/bg-images/bg-9.jpg)]",
+    "09n": "bg-[url(/image/bg-images/bg-rain-n.jpg)]",
     "10d": "bg-[url(/image/bg-images/bg-2.jpg)]",
-    "10n": "bg-[url(/image/bg-images/bg-2.jpg)]",
+    "10n": "bg-[url(/image/bg-images/bg-rain-n.jpg)]",
     "13d": "bg-[url(/image/bg-images/bg-7.jpg)]",
     "50d": "bg-[url(/image/bg-images/bg-8.jpg)]",
     "01d": "bg-[url(/image/bg-images/bg-1.jpg)]",
