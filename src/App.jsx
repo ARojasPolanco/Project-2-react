@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import Weather from './components/Weather'
+import Loader from './components/Loader'
 
 
 function App() {
   const [weatherInfo, setWhatherInfo] = useState(null)
   const [city, setCity] = useState(null)
+  const [loader, setLoader] = useState(true)
 
   const imagesWeather = {
     "11d": "bg-[url(/image/bg-images/bg-5-d.jpg)]",
@@ -41,7 +43,7 @@ function App() {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}`
 
     axios.get(url)
-      .then(({ data }) => setWhatherInfo(data))
+      .then(({ data }) => { setWhatherInfo(data) })
       .catch((err) => console.log(err))
   }
 
@@ -63,9 +65,18 @@ function App() {
     navigator.geolocation.getCurrentPosition(success)
   }, [])
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false)
+    }, 3000)
+  }, [])
+
   return (
 
     <main className={`bg-gray-700 text-white min-h-screen font-lato flex justify-center items-center px-4 ${imagesWeather[changeCity?.weather[0].icon]} bg-center bg-cover bg-no-repeat`}>
+      {
+        loader && <Loader />
+      }
       <Weather changeCity={changeCity} handleChangeCity={handleChangeCity} />
     </main >
 
