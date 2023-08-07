@@ -3,7 +3,7 @@ const Loader = () => {
         <section className="bg-[#373839] min-h-screen min-w-full fixed font-lato flex justify-center items-center">
             <div className="flex flex-col justify-center items-center gap-3">
                 <img src="/image/loader/img01.png" alt="Weather icon" className="animate-bounce" />
-                <h1 className="text-white text-4xl font-bold">WeatherApp</h1>
+                <h1 className="text-white text-4xl font-bold">Clima App</h1>
                 <section className="bg-white/80 flex justify-center px-4 p-[3px] gap-3 rounded-xl">
                     <img src="/image/loader/img1.png" alt="Weather icon" className="animate-pulse" />
                     <img src="/image/loader/img2.png" alt="Weather icon" className="animate-pulse" />

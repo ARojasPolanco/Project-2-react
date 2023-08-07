@@ -40,7 +40,7 @@ function App() {
 
     const API_KEY = "4632fa64d5e084b683ade850c15b9a07"
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}`
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}&lang=sp`
 
     axios.get(url)
       .then(({ data }) => { setWhatherInfo(data) })
@@ -54,7 +54,7 @@ function App() {
 
     const API_KEY = "4632fa64d5e084b683ade850c15b9a07"
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&lang=sp`
 
     axios.get(url)
       .then(({ data }) => setCity(data))
