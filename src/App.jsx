@@ -28,7 +28,7 @@ function App() {
     "03d": "bg-[url(/image/bg-images/bg-3.jpg)]",
     "03n": "bg-[url(/image/bg-images/bg-11-n.jpg)]",
     "04d": "bg-[url(/image/bg-images/bg-6.jpg)]",
-    "04n": "bg-[url(/image/bg-images/bg-12-n.jpeg)]",
+    "04n": "bg-[url(/image/bg-images/bg-12-n.jpg)]",
   }
 
   const changeCity = city === null ? weatherInfo : city
@@ -50,7 +50,7 @@ function App() {
   const handleChangeCity = (e) => {
     e.preventDefault()
 
-    const cityName = e.target.cityName.value
+    const cityName = e.target.cityName.value.trim()
 
     const API_KEY = "4632fa64d5e084b683ade850c15b9a07"
 
