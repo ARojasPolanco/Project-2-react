@@ -1,7 +1,8 @@
-import { Suspense, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import Weather from './components/Weather'
+
 
 function App() {
   const [weatherInfo, setWhatherInfo] = useState(null)
@@ -63,9 +64,11 @@ function App() {
   }, [])
 
   return (
+
     <main className={`bg-gray-700 text-white min-h-screen font-lato flex justify-center items-center px-4 ${imagesWeather[changeCity?.weather[0].icon]} bg-center bg-cover bg-no-repeat`}>
       <Weather changeCity={changeCity} handleChangeCity={handleChangeCity} />
     </main >
+
   )
 }
 
