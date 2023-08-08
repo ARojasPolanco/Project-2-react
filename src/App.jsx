@@ -3,12 +3,14 @@ import './App.css'
 import axios from 'axios'
 import Weather from './components/Weather'
 import Loader from './components/Loader'
+import Modal from './components/Modal'
 
 
 function App() {
   const [weatherInfo, setWhatherInfo] = useState(null)
   const [city, setCity] = useState(null)
   const [loader, setLoader] = useState(true)
+  const [modalInfo, setModalInfo] = useState(false)
 
   const imagesWeather = {
     "11d": "bg-[url(/image/bg-images/bg-5-d.jpg)]",
@@ -44,7 +46,7 @@ function App() {
 
     axios.get(url)
       .then(({ data }) => { setWhatherInfo(data) })
-      .catch((err) => console.log(err))
+      .catch((err) => setModalInfo(err))
   }
 
   const handleChangeCity = (e) => {
@@ -58,7 +60,11 @@ function App() {
 
     axios.get(url)
       .then(({ data }) => setCity(data))
-      .catch((err) => console.log(err))
+      .catch((err) => setModalInfo(err))
+  }
+
+  const handleModalInfo = () => {
+    setModalInfo(false)
   }
 
   useEffect(() => {
@@ -68,7 +74,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false)
-    }, 3000)
+    }, 2000)
   }, [])
 
   return (
@@ -77,9 +83,13 @@ function App() {
       {
         loader && <Loader />
       }
+
+      {
+        modalInfo && <Modal handleModalInfo={handleModalInfo} />
+      }
+
       <Weather changeCity={changeCity} handleChangeCity={handleChangeCity} />
     </main >
-
   )
 }
 
