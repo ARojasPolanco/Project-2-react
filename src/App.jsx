@@ -13,6 +13,7 @@ function App() {
   const [loader, setLoader] = useState(true)
   const [modalInfo, setModalInfo] = useState(false)
   const [modalInfoTwo, setModalInfoTwo] = useState(false)
+  const [isShowModal, setIsShowModal] = useState(false)
 
   const imagesWeather = {
     "11d": "bg-[url(/image/bg-images/bg-5-d.jpg)]",
@@ -71,11 +72,18 @@ function App() {
 
   const handleModalInfo = () => {
     setModalInfo(false)
+    setIsShowModal(false)
   }
 
   const handleModalInfoTwo = () => {
     setModalInfoTwo(false)
+    setIsShowModal(false)
   }
+
+  const handleIsShowModal = () => {
+    setIsShowModal(true)
+  }
+  console.log(isShowModal)
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(success)
@@ -95,14 +103,14 @@ function App() {
       }
 
       {
-        modalInfo && <Modal handleModalInfo={handleModalInfo} />
+        modalInfo && <Modal handleModalInfo={handleModalInfo} isShowModal={isShowModal} />
       }
 
       {
-        modalInfoTwo && < Modal2 handleModalInfoTwo={handleModalInfoTwo} />
+        modalInfoTwo && < Modal2 handleModalInfoTwo={handleModalInfoTwo} isShowModal={isShowModal} />
       }
 
-      <Weather changeCity={changeCity} handleChangeCity={handleChangeCity} />
+      <Weather changeCity={changeCity} handleChangeCity={handleChangeCity} handleIsShowModal={handleIsShowModal} />
     </main >
   )
 }

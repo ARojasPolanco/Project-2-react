@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Weather = ({ changeCity, handleChangeCity }) => {
+const Weather = ({ changeCity, handleChangeCity, handleIsShowModal, isShowModal }) => {
     const [isCelsius, setIsCelsius] = useState(true)
 
     const kelvinToCelcius = (tempKelvin) => {
@@ -23,7 +23,7 @@ const Weather = ({ changeCity, handleChangeCity }) => {
             {/* Input */}
             <form onSubmit={handleChangeCity} className='flex rounded-md overflow-hidden max-w-max mx-auto mb-6'>
                 <input id="cityName" autoComplete="off" type="text" placeholder="Buscar una ciudad" className="text-black p-2" />
-                <button className="bg-neutral-700 p-2">Buscar</button>
+                <button className="bg-neutral-700 p-2" onClick={handleIsShowModal}>Buscar</button>
             </form>
 
 
