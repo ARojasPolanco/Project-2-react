@@ -40,22 +40,22 @@ const Weather = ({ changeCity, handleChangeCity }) => {
                 </section>
 
                 {/* sección inferior */}
-                <section className="bg-white/60 p-2 py-4 rounded-2xl grid grid-cols-3 items-center sm:grid-cols-1 divide-x-2 divide-slate-700 sm:divide-y-2 sm:divide-x-0">
-                    <article className="flex gap-2 items-center pl-4 sm: pt-0">
+                <section className="bg-white/60 p-2 py-4 rounded-2xl grid grid-cols-3 items-center justify-center sm:grid-cols-1 divide-x-2 divide-slate-700 sm:divide-y-2 sm:divide-x-0">
+                    <article className="flex gap-2 items-center pl-4 sm: sm:pt-0">
                         <div className="w-[18px]">
                             <img src='/image/img1.png' alt='' />
                         </div>
                         <span className="text-black font-bold">{changeCity?.wind.speed}m/s</span>
                     </article>
 
-                    <article className="flex gap-2 items-center pl-4 sm: pt-4">
+                    <article className="flex gap-2 items-center pl-4 sm:pt-4">
                         <div className="w-[18px]">
                             <img src='/image/img3.png' alt='' />
                         </div>
                         <span className="text-black font-bold">{changeCity?.main.humidity}%</span>
                     </article>
 
-                    <article className="flex gap-2 items-center pl-4 sm: pt-4">
+                    <article className="flex gap-2 items-center pl-4 sm:pt-4">
                         <div className="w-[18px]">
                             <img src='/image/img2.png' alt='' />
                         </div>
