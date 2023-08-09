@@ -1,6 +1,6 @@
-const Modal2 = ({ handleModalInfoTwo }) => {
+const Modal2 = ({ handleModalInfoTwo, modalInfoTwo }) => {
     return (
-        <section className={`min-h-screen flex justify-center items-center pb-6 absolute backdrop-blur-sm sm:max-w-[550px]`}>
+        <section className={`${modalInfoTwo ? "left-0 " : "left-full "} transition-all duration-700 min-h-screen flex justify-center items-center pb-6 absolute backdrop-blur-sm sm:min-w-full`}>
             <div className="min-h-full bg-slate-500 flex flex-col justify-center items-center px-4 rounded-3xl">
                 <h2 className="font-lato text-gray-300 text-bold text-2xl">Tenemos un problema</h2>
                 <div>

@@ -1,9 +1,7 @@
-const Modal = ({ handleModalInfo, isShowModal }) => {
-
-    const showModal = isShowModal ? "left-[0]" : "let-full"
+const Modal = ({ handleModalInfo, modalInfo }) => {
 
     return (
-        <section className={`${showModal} transition-all duration-1000 min-h-screen flex justify-center items-center pb-6 absolute backdrop-blur-sm sm:min-w-full`}>
+        <section className={`${modalInfo ? "left-0" : "left-full "} transition-all duration-700 min-h-screen flex justify-center items-center pb-6 absolute backdrop-blur-sm sm:min-w-full`}>
             <div className="min-h-full bg-slate-500 flex flex-col justify-center items-center px-4 rounded-3xl">
                 <h2 className="font-lato text-gray-300 text-bold text-2xl">Tenemos un problema</h2>
                 <div>

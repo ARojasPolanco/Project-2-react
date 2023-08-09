@@ -72,12 +72,10 @@ function App() {
 
   const handleModalInfo = () => {
     setModalInfo(false)
-    setIsShowModal(false)
   }
 
   const handleModalInfoTwo = () => {
     setModalInfoTwo(false)
-    setIsShowModal(false)
   }
 
   const handleIsShowModal = () => {
@@ -103,11 +101,11 @@ function App() {
       }
 
       {
-        modalInfo && <Modal handleModalInfo={handleModalInfo} isShowModal={isShowModal} />
+        <Modal modalInfo={modalInfo} handleModalInfo={handleModalInfo} isShowModal={isShowModal} />
       }
 
       {
-        modalInfoTwo && < Modal2 handleModalInfoTwo={handleModalInfoTwo} isShowModal={isShowModal} />
+        < Modal2 modalInfoTwo={modalInfoTwo} handleModalInfoTwo={handleModalInfoTwo} isShowModal={isShowModal} />
       }
 
       <Weather changeCity={changeCity} handleChangeCity={handleChangeCity} handleIsShowModal={handleIsShowModal} />
