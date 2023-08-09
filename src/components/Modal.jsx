@@ -1,9 +1,9 @@
 const Modal = ({ handleModalInfo, modalInfo }) => {
 
     return (
-        <section className={`${modalInfo ? "left-0" : "left-full "} transition-all duration-700 min-h-screen flex justify-center items-center pb-6 absolute backdrop-blur-sm sm:min-w-full`}>
+        <section className={`${modalInfo ? "left-0 " : "left-full "} transition-all duration-700 min-h-screen min-w-full flex justify-center items-center pb-6 absolute backdrop-blur-sm`}>
             <div className="min-h-full bg-slate-500 flex flex-col justify-center items-center px-4 rounded-3xl">
-                <h2 className="font-lato text-gray-300 text-bold text-2xl">Tenemos un problema</h2>
+                <h2 className="font-lato text-gray-300 text-bold text-2xl mt-6">Tenemos un problema</h2>
                 <div>
                     <img src="/image/modal/modal2.png" alt="" className="sm:w-[300px] sm:h-[300px]" />
                 </div>

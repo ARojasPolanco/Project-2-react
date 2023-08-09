@@ -81,7 +81,6 @@ function App() {
   const handleIsShowModal = () => {
     setIsShowModal(true)
   }
-  console.log(isShowModal)
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(success)
@@ -95,7 +94,7 @@ function App() {
 
   return (
 
-    <main className={`bg-gray-700 text-white min-h-screen font-lato flex justify-center items-center px-4 ${imagesWeather[changeCity?.weather[0].icon]} bg-center bg-cover bg-no-repeat`}>
+    <main className={`bg-gray-700 text-white min-h-screen font-lato flex justify-center items-center px-4 ${imagesWeather[changeCity?.weather[0].icon]} bg-center bg-cover bg-no-repeat overflow-hidden relative`}>
       {
         loader && <Loader />
       }
